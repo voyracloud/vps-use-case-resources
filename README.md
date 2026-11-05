@@ -1,39 +1,44 @@
 # VPS Use Case Resources
 
-Worksheets for choosing hosting, planning small-team workflows, and recording operational responsibilities.
+Vendor-neutral worksheets and checklists for choosing servers and proxies, checking outbound paths, and recording operational responsibilities.
 
-Three editable Markdown worksheets help you document requirements, compare alternatives, and assign responsibility. Examples are fictional; the worksheets do not represent tested deployments or provider recommendations.
+Copy a Markdown file, fill in your requirements, and keep the evidence behind your decision. These are editable review tools, not deployment scripts. Worked examples are fictional and do not represent tested products or customer results.
 
-## Start with your task
+## Choose by task
 
-| You want to… | Resource | What you leave with |
-|---|---|---|
-| Compare hosting options for one concrete workload | [Hosting decision worksheet](worksheets/hosting-decision.md) | Comparable requirements, evidence gaps, and an owner for each operational task |
-| Decide whether a repetitive business task is ready for automation | [Automation handoff worksheet](worksheets/automation-handoff.md) | Inputs, exception handling, human review, and a small pilot definition |
-| Make website alerts actionable for a small team | [Monitoring and response checklist](worksheets/monitoring-response.md) | A check plan, recipient, escalation route, and recorded drill outcome |
+| Your task | Resource |
+|---|---|
+| Decide whether you need a server, a proxy, or neither | [Server or proxy selection](worksheets/server-or-proxy-selection.md) |
+| Compare hosting requirements and maintenance responsibility | [Hosting decision](worksheets/hosting-decision.md) |
+| Check client protocols, authentication and DNS behavior | [Proxy client compatibility](worksheets/proxy-client-compatibility.md) |
+| Record which traffic changes after a proxy configuration | [Egress path validation](checklists/egress-path-validation.md) |
+| Observe session changes or a fixed-IP allocation | [Session and IP observation](worksheets/session-ip-observation.md) |
+| Investigate conflicting IP location results | [IP location investigation](worksheets/ip-location-investigation.md) |
+| Match comparable offers before acting on price changes | [Price monitoring record](worksheets/price-monitoring-record.md) |
+| Compare workflow usage units and operating costs | [Workflow usage and cost](worksheets/workflow-usage-counting.md) |
+| Define inputs, exceptions and human intervention | [Automation handoff](worksheets/automation-handoff.md) |
+| Record authorized regional ad and landing-page observations | [Ad observation](worksheets/ad-verification-observation.md) |
+| Select browser tools and separately validate extracted fields | [Browser and extraction validation](worksheets/browser-extraction-validation.md) |
+| Review remote desktop access, application needs and recovery | [Remote access review](checklists/remote-access-review.md) |
+| Prepare a WordPress staging release and rollback decision | [WordPress staging release](checklists/wordpress-staging-release.md) |
+| Assign monitoring, notification and recovery responsibility | [Monitoring response](worksheets/monitoring-response.md) |
 
-## How to use a worksheet
+## Use a resource
 
-1. Copy the relevant Markdown file and describe one real task.
-2. Fill in your requirements before selecting a vendor or tool. Mark unknown facts as unknown.
-3. Attach current evidence for product claims, prices, and service terms. Include the date and comparison conditions.
-4. Assign responsibilities and record what must be tested before relying on the plan.
-5. Review the result with the person who will operate it. Remove secrets and identifying customer details before sharing.
+1. Describe one task and select the relevant table. A managed service or no infrastructure change may be the right outcome.
+2. Record requirements, current documentation, versions, dates and unresolved questions. Keep expected behavior separate from observations.
+3. Assign an owner and validate changes in an authorized environment with a recovery route. Remove credentials and identifying customer details before sharing records.
 
-A completed worksheet is a decision record, not a certificate of security, compliance, availability, or suitability. A managed service, a simpler manual process, or no new infrastructure may be the better answer.
-
-## Scope
-
-These resources cover hosting selection, business-process handoffs, and monitoring response. They provide questions and record formats, not deployment scripts or runnable workflows. Product features, prices, and service terms should be confirmed with the relevant provider at the time of a decision.
+A completed table is a decision or observation record, not proof of security, availability, compliance, or destination acceptance. Compatibility and service terms can change; confirm them for your actual client and provider. See [changes](CHANGELOG.md) for repository updates.
 
 ## Maintainer
 
-Prepared by [VoyraCloud](https://www.voyracloud.com/). The worksheets are intended to be useful across hosting providers and tools. Using them does not require purchasing a VoyraCloud service.
+Maintained by [VoyraCloud](https://www.voyracloud.com/). The resources are intended to work across providers and tools; no purchase is required. Report a documentation issue with the relevant file, version and sanitized evidence. Do not post credentials or private customer data.
 
 ## License
 
-The repository materials are available under the [MIT License](LICENSE). You may copy and adapt them under its terms. Linked articles and other third-party materials remain subject to their own terms; the repository license does not relicense them.
+Repository materials are available under the [MIT License](LICENSE). Linked articles and third-party materials retain their own terms; this license does not relicense them.
 
 ## 中文摘要
 
-这是一组供应商中立的 VPS 与业务场景资料：主机选型与责任表、自动化任务交接表、监控与告警响应清单。可按 MIT 许可复制和修改；示例为虚构，不代表已验证的部署或商业效果。
+面向主机与代理选型、出口检查、自动化和运维责任的中立表格与清单，可按 MIT 许可复制修改。案例均为虚构示例，不代表产品实测；使用前请核对实际环境、版本与服务条款。
